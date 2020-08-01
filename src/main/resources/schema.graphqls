@@ -1,0 +1,15 @@
+type Book{
+    title:String!
+    isbn:String!
+
+}
+type Query{
+    getBook(isbn:String!):Book
+}
+type Mutation{
+    createBook(bookWrapper: BookWrapper ): Book
+}
+input BookWrapper{
+    title:String!
+    isbn:String!
+}
